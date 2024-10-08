@@ -52,7 +52,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params.fetch(:id))
+    @movie = Movie.find(params.fetch(:id)).destroy
 
     redirect_to movies_url, notice: "Movie deleted successfully."
   end
